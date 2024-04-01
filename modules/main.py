@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("Hi!\n\nGive /txt Command to Downlaod From a Text file.\n")
+    editable = await m.reply_text("Hi!\n\nGive /txt Command to Downlaod From a Text file./txt\n")
 
 
 @bot.on_message(filters.command("restart"))
@@ -76,7 +76,7 @@ async def account_login(bot: Client, m: Message):
     await input1.delete(True)
     
 
-    await editable.edit("**Enter resolution**")
+    await editable.edit("**Enter resolution 144,360,480,720,1080**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
