@@ -177,7 +177,7 @@ async def download_video(url,cmd, name):
 
         return name
     except FileNotFoundError as exc:
-        return os.path.isfile.splitext[0] + "." + "mp4"
+        return os.path.isfile.splitext[0] + "." + "mkv"
 
 
 async def send_doc(bot: Client, m: Message,cc,ka,cc1,prog,count,name):
